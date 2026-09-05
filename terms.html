@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LegatoScore Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
+    --text: #20242e;
+    --text-secondary: #5c6474;
+    --text-faint: #8891a0;
+    --border: #e3e6ee;
+    --border-strong: #d1d5e2;
+    --accent: #4f5fc7;
+    --accent-ink: #ffffff;
+    --accent-soft: #ecedfa;
+    --shadow: 0 1px 2px rgba(28,32,56,0.04), 0 8px 24px rgba(28,32,56,0.06);
+    --radius-s: 8px;
+    --radius-m: 14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #14161e;
+      --surface: #1a1d27;
+      --surface-raised: #20232f;
+      --text: #e7e9f2;
+      --text-secondary: #a2a8ba;
+      --text-faint: #6d7488;
+      --border: #2a2e3c;
+      --border-strong: #383d4e;
+      --accent: #8f9df2;
+      --accent-ink: #14161e;
+      --accent-soft: #262b42;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #14161e;
+    --surface: #1a1d27;
+    --surface-raised: #20232f;
+    --text: #e7e9f2;
+    --text-secondary: #a2a8ba;
+    --text-faint: #6d7488;
+    --border: #2a2e3c;
+    --border-strong: #383d4e;
+    --accent: #8f9df2;
+    --accent-ink: #14161e;
+    --accent-soft: #262b42;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px rgba(0,0,0,0.35);
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3{
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    text-wrap: balance;
+    color: var(--text);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  a{ color: var(--accent); }
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  header.site{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 24px;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color: var(--text); }
+  .brand-mark{
+    flex: none; display:inline-flex; align-items:center; justify-content:center;
+    width: 28px; height: 28px; border-radius: 9px;
+    background: linear-gradient(135deg, #8fc6fb 0%, #6a7bea 55%, #5648c9 100%);
+    color: #fff; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 600; font-size: 1.05rem;
+    box-shadow: 0 1px 2px rgba(28,32,56,0.18), inset 0 1px 1px rgba(255,255,255,0.35);
+  }
+  .brand-text{ font-family:'Newsreader', Georgia, serif; font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
+  nav.top{ display:flex; gap: 4px; flex-wrap: wrap; }
+  nav.top a{
+    text-decoration:none; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;
+    padding: 8px 12px; border-radius: var(--radius-s); transition: background 0.15s ease, color 0.15s ease;
+  }
+  nav.top a:hover{ background: var(--accent-soft); color: var(--text); }
+  nav.top a[aria-current="page"]{ color: var(--accent); background: var(--accent-soft); }
+
+  .doc-hero{ max-width: 1040px; margin: 0 auto; padding: 56px 24px 8px; }
+  .eyebrow{
+    font-family:'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
+  }
+  .doc-hero h1{ font-size: clamp(2rem, 1.6rem + 1.6vw, 2.8rem); margin: 0 0 12px; }
+  .doc-hero .dek{ color: var(--text-secondary); font-size: 1.05rem; max-width: 62ch; margin: 0 0 20px; }
+  .meta-row{
+    display:flex; flex-wrap:wrap; gap: 10px 18px; font-size: 0.85rem; color: var(--text-faint);
+    font-family:'IBM Plex Mono', monospace; padding-bottom: 32px; border-bottom: 1px solid var(--border);
+  }
+  .meta-row strong{ color: var(--text-secondary); font-weight: 500; }
+
+  .page-shell{
+    max-width: 1040px; margin: 0 auto; padding: 40px 24px 100px;
+    display: grid; grid-template-columns: 200px minmax(0, 680px); gap: 56px; align-items: start;
+  }
+  aside.toc{ position: sticky; top: 78px; font-size: 0.85rem; }
+  aside.toc .toc-label{
+    font-family:'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;
+  }
+  aside.toc ol{ list-style: none; margin:0; padding:0; display:flex; flex-direction:column; gap: 2px; }
+  aside.toc a{ display:block; text-decoration:none; color: var(--text-secondary); padding: 6px 10px; border-radius: var(--radius-s); }
+  aside.toc a:hover{ color: var(--text); background: var(--accent-soft); }
+
+  .mobile-toc{ display:none; }
+
+  main.doc{ min-width: 0; }
+  section.clause{ padding: 36px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 90px; }
+  section.clause:last-of-type{ border-bottom: none; }
+  .clause-head{ display:flex; align-items: baseline; gap: 14px; margin-bottom: 14px; }
+  .clause-num{ font-family:'IBM Plex Mono', monospace; font-size: 0.85rem; color: var(--accent); flex: none; }
+  section.clause h2{ font-size: 1.4rem; margin: 0; }
+  section.clause p{ margin: 0 0 14px; color: var(--text); }
+  section.clause p:last-child{ margin-bottom: 0; }
+  section.clause ul{ margin: 0 0 14px; padding-left: 1.3em; }
+  section.clause li{ margin-bottom: 8px; }
+  section.clause li:last-child{ margin-bottom:0; }
+  .muted{ color: var(--text-secondary); }
+
+  .callout{
+    background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius-m);
+    padding: 18px 20px; margin: 18px 0; font-size: 0.95rem;
+  }
+  .callout p{ margin:0; }
+  .callout strong{ color: var(--text); }
+
+  .edit-flag{
+    font-family:'IBM Plex Mono', monospace; font-size: 0.78rem; background: var(--surface-raised);
+    border: 1px dashed var(--border-strong); color: var(--text-secondary); border-radius: var(--radius-s);
+    padding: 2px 7px; white-space: nowrap;
+  }
+
+  address{ font-style: normal; }
+
+  footer.site{ border-top: 1px solid var(--border); padding: 32px 24px 48px; }
+  .footer-inner{
+    max-width: 1040px; margin: 0 auto; display:flex; flex-wrap: wrap; gap: 10px 24px;
+    justify-content: space-between; align-items: center; color: var(--text-faint); font-size: 0.85rem;
+  }
+  .footer-inner nav{ display:flex; gap: 18px; }
+  .footer-inner a{ color: var(--text-faint); text-decoration: none; }
+  .footer-inner a:hover{ color: var(--accent); }
+
+  @media (max-width: 900px){
+    .page-shell{ grid-template-columns: minmax(0,1fr); gap: 0; }
+    aside.toc{ display:none; }
+    .mobile-toc{ display:block; margin-bottom: 8px; }
+    .mobile-toc summary{
+      cursor: pointer; font-family:'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-secondary); padding: 10px 14px;
+      border: 1px solid var(--border); border-radius: var(--radius-s); background: var(--surface);
+    }
+    .mobile-toc[open] summary{ margin-bottom: 10px; }
+    .mobile-toc ol{ list-style: none; margin:0; padding: 4px 4px 4px; display:flex; flex-direction:column; gap:2px; }
+    .mobile-toc a{ display:block; text-decoration:none; color: var(--text-secondary); padding: 7px 10px; font-size: 0.9rem; }
+  }
+  @media (max-width: 560px){
+    .header-inner{ padding: 14px 18px; }
+    .brand-text{ font-size: 1.05rem; }
+    .doc-hero{ padding: 40px 18px 8px; }
+    .page-shell{ padding: 32px 18px 80px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="LegatoScore home">
+      <span class="brand-mark" aria-hidden="true">L</span>
+      <span class="brand-text">LegatoScore</span>
+    </a>
+    <nav class="top" aria-label="Legal pages">
+      <a href="index.html">Privacy</a>
+      <a href="terms.html" aria-current="page">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<div class="doc-hero">
+  <p class="eyebrow">Legal · Terms</p>
+  <h1>Terms of Service</h1>
+  <p class="dek">The agreement between you and LegatoScore for using the app to practice, scan scores, and turn pages hands-free.</p>
+  <div class="meta-row">
+    <span><strong>Effective</strong> <span class="edit-flag">[DATE]</span></span>
+    <span><strong>Applies to</strong> LegatoScore for iPad</span>
+    <span><strong>Publisher</strong> Min Wan</span>
+  </div>
+</div>
+
+<div class="page-shell">
+  <aside class="toc" aria-label="Table of contents">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#acceptance">01 · Acceptance of Terms</a></li>
+      <li><a href="#license">02 · License to Use the App</a></li>
+      <li><a href="#user-content">03 · Your Recordings &amp; Scans</a></li>
+      <li><a href="#acceptable-use">04 · Acceptable Use</a></li>
+      <li><a href="#ip">05 · Intellectual Property</a></li>
+      <li><a href="#disclaimers">06 · Disclaimers</a></li>
+      <li><a href="#liability">07 · Limitation of Liability</a></li>
+      <li><a href="#termination">08 · Termination</a></li>
+      <li><a href="#governing-law">09 · Governing Law</a></li>
+      <li><a href="#changes">10 · Changes to These Terms</a></li>
+      <li><a href="#contact">11 · Contact Us</a></li>
+    </ol>
+  </aside>
+
+  <main class="doc">
+    <details class="mobile-toc">
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#acceptance">01 · Acceptance of Terms</a></li>
+        <li><a href="#license">02 · License to Use the App</a></li>
+        <li><a href="#user-content">03 · Your Recordings &amp; Scans</a></li>
+        <li><a href="#acceptable-use">04 · Acceptable Use</a></li>
+        <li><a href="#ip">05 · Intellectual Property</a></li>
+        <li><a href="#disclaimers">06 · Disclaimers</a></li>
+        <li><a href="#liability">07 · Limitation of Liability</a></li>
+        <li><a href="#termination">08 · Termination</a></li>
+        <li><a href="#governing-law">09 · Governing Law</a></li>
+        <li><a href="#changes">10 · Changes to These Terms</a></li>
+        <li><a href="#contact">11 · Contact Us</a></li>
+      </ol>
+    </details>
+
+    <section class="clause" id="acceptance">
+      <div class="clause-head"><span class="clause-num">01</span><h2>Acceptance of Terms</h2></div>
+      <p>By downloading, installing, or using LegatoScore, you agree to these Terms of Service. If you do not agree, please do not use the app. These terms apply to the version of LegatoScore distributed on the Apple App Store and are supplemented by Apple's own Licensed Application End User License Agreement.</p>
+    </section>
+
+    <section class="clause" id="license">
+      <div class="clause-head"><span class="clause-num">02</span><h2>License to Use the App</h2></div>
+      <p>Subject to your compliance with these terms, Min Wan grants you a limited, non-exclusive, non-transferable license to install and use LegatoScore on Apple devices that you own or control, for your personal, non-commercial practice and performance use.</p>
+    </section>
+
+    <section class="clause" id="user-content">
+      <div class="clause-head"><span class="clause-num">03</span><h2>Your Recordings and Scans</h2></div>
+      <p>Reference recordings, live audio captured during practice, and scanned sheet music you create within LegatoScore belong to you. We claim no ownership over this content. LegatoScore processes and stores this content entirely on your device — it is never uploaded to us or to any third party.</p>
+      <div class="callout">
+        <p><strong>A note on scanned scores.</strong> Scanning a copyrighted edition for your own practice is generally for personal use only. LegatoScore does not grant any rights to redistribute scanned material, and you remain responsible for confirming you have the right to use the sheet music you scan.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="acceptable-use">
+      <div class="clause-head"><span class="clause-num">04</span><h2>Acceptable Use</h2></div>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Reverse-engineer, decompile, or attempt to extract the source code of the app;</li>
+        <li>Use the app to infringe the intellectual property rights of others, including by distributing scanned copyrighted scores;</li>
+        <li>Interfere with the normal operation of the app or attempt to circumvent any licensing mechanism.</li>
+      </ul>
+    </section>
+
+    <section class="clause" id="ip">
+      <div class="clause-head"><span class="clause-num">05</span><h2>Intellectual Property</h2></div>
+      <p>LegatoScore, including its design, code, and branding, is owned by Min Wan and is protected by copyright and other intellectual property laws. Nothing in these terms transfers any intellectual property rights to you other than the limited license to use the app described above.</p>
+    </section>
+
+    <section class="clause" id="disclaimers">
+      <div class="clause-head"><span class="clause-num">06</span><h2>Disclaimers</h2></div>
+      <p>LegatoScore is provided "as is" and "as available," without warranties of any kind, express or implied. We do not guarantee that page turns will always occur at the precise moment you expect, that audio detection will be error-free, or that the app will be uninterrupted or free of defects. You remain responsible for having a backup plan during any live performance.</p>
+    </section>
+
+    <section class="clause" id="liability">
+      <div class="clause-head"><span class="clause-num">07</span><h2>Limitation of Liability</h2></div>
+      <p>To the maximum extent permitted by law, Min Wan shall not be liable for any indirect, incidental, special, or consequential damages arising out of or related to your use of LegatoScore, including a missed page turn during a rehearsal or performance. Our total liability for any claim relating to the app shall not exceed the amount you paid, if any, to use it.</p>
+    </section>
+
+    <section class="clause" id="termination">
+      <div class="clause-head"><span class="clause-num">08</span><h2>Termination</h2></div>
+      <p>You may stop using LegatoScore and delete it at any time. We may suspend or terminate your ability to use the app if you violate these terms. Because LegatoScore stores your data locally, deleting the app removes your license to use it but does not, by itself, delete anything from our servers — as we do not operate any that hold your content.</p>
+    </section>
+
+    <section class="clause" id="governing-law">
+      <div class="clause-head"><span class="clause-num">09</span><h2>Governing Law</h2></div>
+      <p>These terms are governed by the laws of <span class="edit-flag">[JURISDICTION]</span>, without regard to its conflict of law principles. Any dispute arising from these terms will be resolved in the courts of that jurisdiction, except where local consumer protection law requires otherwise. If you are located in mainland China, additional rights may apply to you under the Personal Information Protection Law (PIPL).</p>
+    </section>
+
+    <section class="clause" id="changes">
+      <div class="clause-head"><span class="clause-num">10</span><h2>Changes to These Terms</h2></div>
+      <p>We may revise these terms as LegatoScore's features change — for example, if we introduce accounts, iCloud sync, or subscriptions. We will update the effective date above when we do, and continued use of the app after a revision constitutes acceptance of the updated terms.</p>
+    </section>
+
+    <section class="clause" id="contact">
+      <div class="clause-head"><span class="clause-num">11</span><h2>Contact Us</h2></div>
+      <p>Questions about these terms can be sent to:</p>
+      <address>
+        <a href="mailto:legatoappsupport@gmail.com">legatoappsupport@gmail.com</a>
+      </address>
+    </section>
+  </main>
+</div>
+
+<footer class="site">
+  <div class="footer-inner">
+    <span>© 2026 Min Wan · Last updated <span class="edit-flag">[DATE]</span></span>
+    <nav>
+      <a href="index.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
