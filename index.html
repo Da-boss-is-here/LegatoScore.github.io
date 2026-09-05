@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LegatoScore Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
+    --text: #20242e;
+    --text-secondary: #5c6474;
+    --text-faint: #8891a0;
+    --border: #e3e6ee;
+    --border-strong: #d1d5e2;
+    --accent: #4f5fc7;
+    --accent-ink: #ffffff;
+    --accent-soft: #ecedfa;
+    --shadow: 0 1px 2px rgba(28,32,56,0.04), 0 8px 24px rgba(28,32,56,0.06);
+    --radius-s: 8px;
+    --radius-m: 14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #14161e;
+      --surface: #1a1d27;
+      --surface-raised: #20232f;
+      --text: #e7e9f2;
+      --text-secondary: #a2a8ba;
+      --text-faint: #6d7488;
+      --border: #2a2e3c;
+      --border-strong: #383d4e;
+      --accent: #8f9df2;
+      --accent-ink: #14161e;
+      --accent-soft: #262b42;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #14161e;
+    --surface: #1a1d27;
+    --surface-raised: #20232f;
+    --text: #e7e9f2;
+    --text-secondary: #a2a8ba;
+    --text-faint: #6d7488;
+    --border: #2a2e3c;
+    --border-strong: #383d4e;
+    --accent: #8f9df2;
+    --accent-ink: #14161e;
+    --accent-soft: #262b42;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px rgba(0,0,0,0.35);
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3{
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    text-wrap: balance;
+    color: var(--text);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  a{ color: var(--accent); }
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 24px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color: var(--text);
+  }
+  .brand-mark{
+    flex: none;
+    display:inline-flex; align-items:center; justify-content:center;
+    width: 28px; height: 28px; border-radius: 9px;
+    background: linear-gradient(135deg, #8fc6fb 0%, #6a7bea 55%, #5648c9 100%);
+    color: #fff;
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 1px 2px rgba(28,32,56,0.18), inset 0 1px 1px rgba(255,255,255,0.35);
+  }
+  .brand-text{
+    font-family:'Newsreader', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  nav.top{
+    display:flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  nav.top a{
+    text-decoration:none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: var(--radius-s);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  nav.top a:hover{ background: var(--accent-soft); color: var(--text); }
+  nav.top a[aria-current="page"]{ color: var(--accent); background: var(--accent-soft); }
+
+  /* ---------- Hero ---------- */
+  .doc-hero{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 56px 24px 8px;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+  .doc-hero h1{
+    font-size: clamp(2rem, 1.6rem + 1.6vw, 2.8rem);
+    margin: 0 0 12px;
+  }
+  .doc-hero .dek{
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 62ch;
+    margin: 0 0 20px;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px 18px;
+    font-size: 0.85rem;
+    color: var(--text-faint);
+    font-family:'IBM Plex Mono', monospace;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  .meta-row strong{ color: var(--text-secondary); font-weight: 500; }
+
+  /* ---------- Shell / TOC ---------- */
+  .page-shell{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 40px 24px 100px;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 680px);
+    gap: 56px;
+    align-items: start;
+  }
+  aside.toc{
+    position: sticky;
+    top: 78px;
+    font-size: 0.85rem;
+  }
+  aside.toc .toc-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 14px;
+  }
+  aside.toc ol{
+    list-style: none;
+    margin:0; padding:0;
+    display:flex;
+    flex-direction:column;
+    gap: 2px;
+  }
+  aside.toc a{
+    display:block;
+    text-decoration:none;
+    color: var(--text-secondary);
+    padding: 6px 10px;
+    border-radius: var(--radius-s);
+    border-left: 2px solid transparent;
+  }
+  aside.toc a:hover{ color: var(--text); background: var(--accent-soft); }
+
+  .mobile-toc{ display:none; }
+
+  main.doc{ min-width: 0; }
+  section.clause{
+    padding: 36px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 90px;
+  }
+  section.clause:last-of-type{ border-bottom: none; }
+  .clause-head{
+    display:flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .clause-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    flex: none;
+  }
+  section.clause h2{
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  section.clause p{ margin: 0 0 14px; color: var(--text); }
+  section.clause p:last-child{ margin-bottom: 0; }
+  section.clause ul{ margin: 0 0 14px; padding-left: 1.3em; }
+  section.clause li{ margin-bottom: 8px; }
+  section.clause li:last-child{ margin-bottom:0; }
+  .muted{ color: var(--text-secondary); }
+
+  .callout{
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    padding: 18px 20px;
+    margin: 18px 0;
+    font-size: 0.95rem;
+  }
+  .callout p{ margin:0; }
+  .callout strong{ color: var(--text); }
+
+  .edit-flag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    background: var(--surface-raised);
+    border: 1px dashed var(--border-strong);
+    color: var(--text-secondary);
+    border-radius: var(--radius-s);
+    padding: 2px 7px;
+    white-space: nowrap;
+  }
+
+  address{ font-style: normal; }
+
+  /* ---------- Footer ---------- */
+  footer.site{
+    border-top: 1px solid var(--border);
+    padding: 32px 24px 48px;
+  }
+  .footer-inner{
+    max-width: 1040px;
+    margin: 0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-faint);
+    font-size: 0.85rem;
+  }
+  .footer-inner nav{ display:flex; gap: 18px; }
+  .footer-inner a{ color: var(--text-faint); text-decoration: none; }
+  .footer-inner a:hover{ color: var(--accent); }
+
+  @media (max-width: 900px){
+    .page-shell{ grid-template-columns: minmax(0,1fr); gap: 0; }
+    aside.toc{ display:none; }
+    .mobile-toc{
+      display:block;
+      margin-bottom: 8px;
+    }
+    .mobile-toc summary{
+      cursor: pointer;
+      font-family:'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-s);
+      background: var(--surface);
+    }
+    .mobile-toc[open] summary{ margin-bottom: 10px; }
+    .mobile-toc ol{
+      list-style: none;
+      margin:0; padding: 4px 4px 4px;
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .mobile-toc a{
+      display:block;
+      text-decoration:none;
+      color: var(--text-secondary);
+      padding: 7px 10px;
+      font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 560px){
+    .header-inner{ padding: 14px 18px; }
+    .brand-text{ font-size: 1.05rem; }
+    .doc-hero{ padding: 40px 18px 8px; }
+    .page-shell{ padding: 32px 18px 80px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="LegatoScore home">
+      <span class="brand-mark" aria-hidden="true">L</span>
+      <span class="brand-text">LegatoScore</span>
+    </a>
+    <nav class="top" aria-label="Legal pages">
+      <a href="index.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<div class="doc-hero">
+  <p class="eyebrow">Legal · Privacy</p>
+  <h1>Privacy Policy</h1>
+  <p class="dek">How LegatoScore handles the audio, scans, and practice data that pass through your iPad while you play.</p>
+  <div class="meta-row">
+    <span><strong>Effective</strong> <span class="edit-flag">[DATE]</span></span>
+    <span><strong>Applies to</strong> LegatoScore for iPad</span>
+    <span><strong>Publisher</strong> Min Wan</span>
+  </div>
+</div>
+
+<div class="page-shell">
+  <aside class="toc" aria-label="Table of contents">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#introduction">01 · Introduction</a></li>
+      <li><a href="#information-we-collect">02 · Information the App Accesses</a></li>
+      <li><a href="#how-we-use">03 · How Data Is Stored</a></li>
+      <li><a href="#sharing">04 · Data We Do Not Collect</a></li>
+      <li><a href="#retention">05 · Third-Party Services &amp; SDKs</a></li>
+      <li><a href="#your-rights">06 · Your Choices &amp; Data Deletion</a></li>
+      <li><a href="#children">07 · Children's Privacy</a></li>
+      <li><a href="#changes">08 · Future Changes</a></li>
+      <li><a href="#contact">09 · Contact Us</a></li>
+      <li><a href="#governing-law">10 · Governing Law</a></li>
+    </ol>
+  </aside>
+
+  <main class="doc">
+    <details class="mobile-toc">
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#introduction">01 · Introduction</a></li>
+        <li><a href="#information-we-collect">02 · Information the App Accesses</a></li>
+        <li><a href="#how-we-use">03 · How Data Is Stored</a></li>
+        <li><a href="#sharing">04 · Data We Do Not Collect</a></li>
+        <li><a href="#retention">05 · Third-Party Services &amp; SDKs</a></li>
+        <li><a href="#your-rights">06 · Your Choices &amp; Data Deletion</a></li>
+        <li><a href="#children">07 · Children's Privacy</a></li>
+        <li><a href="#changes">08 · Future Changes</a></li>
+        <li><a href="#contact">09 · Contact Us</a></li>
+        <li><a href="#governing-law">10 · Governing Law</a></li>
+      </ol>
+    </details>
+
+    <section class="clause" id="introduction">
+      <div class="clause-head"><span class="clause-num">01</span><h2>Introduction</h2></div>
+      <p>Min Wan ("we," "us," or "our") operates the LegatoScore mobile application (the "App"). This Privacy Policy explains how the App handles information when you use it.</p>
+      <div class="callout">
+        <p><strong>Summary.</strong> LegatoScore is designed to work entirely on your device. We do not operate any servers that receive your data, we do not use analytics or advertising SDKs, and nothing you record, scan, or create in the App is transmitted anywhere. All data stays on your iPad unless you choose to share or export it yourself.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="information-we-collect">
+      <div class="clause-head"><span class="clause-num">02</span><h2>Information the App Accesses</h2></div>
+      <ul>
+        <li><strong>Microphone.</strong> LegatoScore uses your iPad's microphone to listen to your live performance and to record reference performances you choose to create. This audio is processed and/or stored only on your device. It is never transmitted to us or to any third party.</li>
+        <li><strong>Camera.</strong> LegatoScore uses your iPad's camera to let you scan sheet music into PDF files for use within the App. Scanned images/PDFs are stored only on your device.</li>
+      </ul>
+    </section>
+
+    <section class="clause" id="how-we-use">
+      <div class="clause-head"><span class="clause-num">03</span><h2>How Data Is Stored</h2></div>
+      <p>Reference recordings and their associated analysis data, along with any scanned scores, are saved locally in the App's storage on your iPad. This data remains on your device until you delete it yourself within the App (or delete the App itself). We do not have access to this data, and it is not backed up to any server or cloud service operated by us.</p>
+    </section>
+
+    <section class="clause" id="sharing">
+      <div class="clause-head"><span class="clause-num">04</span><h2>Data We Do Not Collect</h2></div>
+      <p>We do not collect, receive, or have access to any of the following through the App: your name, email address, contact information, location, browsing history, or any device identifiers. The App makes no network requests and does not share data with any third party, advertiser, or analytics provider, because it has no server-side component at all.</p>
+    </section>
+
+    <section class="clause" id="retention">
+      <div class="clause-head"><span class="clause-num">05</span><h2>Third-Party Services and SDKs</h2></div>
+      <p>LegatoScore does not integrate any third-party analytics, advertising, or crash-reporting SDKs. The only diagnostic information that may exist is anonymous crash data that Apple itself may collect through the operating system's standard crash-reporting mechanism (this is governed by Apple's own privacy policy, not ours, and we are not responsible for disclosing data collected directly by Apple).</p>
+    </section>
+
+    <section class="clause" id="your-rights">
+      <div class="clause-head"><span class="clause-num">06</span><h2>Your Choices and Data Deletion</h2></div>
+      <p>Because everything is stored locally, you are always in control: you can delete any individual recording or scanned score within the App at any time, and deleting the App itself will remove all associated local data from your device.</p>
+    </section>
+
+    <section class="clause" id="children">
+      <div class="clause-head"><span class="clause-num">07</span><h2>Children's Privacy</h2></div>
+      <p>LegatoScore does not knowingly collect personal information from anyone, including children, because it does not collect personal information at all. The App is not directed specifically at children, but its design (an on-device music practice tool) means no personal data is transmitted regardless of the user's age.</p>
+    </section>
+
+    <section class="clause" id="changes">
+      <div class="clause-head"><span class="clause-num">08</span><h2>Future Changes</h2></div>
+      <p>LegatoScore may add features in future updates — including user accounts, iCloud sync, and subscriptions — that would change how data is handled (for example, by transmitting data to a server for the first time). If and when that happens, we will update this Privacy Policy before those features become active, and the App's App Store Connect privacy disclosures will be updated accordingly.</p>
+    </section>
+
+    <section class="clause" id="contact">
+      <div class="clause-head"><span class="clause-num">09</span><h2>Contact Us</h2></div>
+      <p>If you have questions about this Privacy Policy, contact us at:</p>
+      <address>
+        <a href="mailto:legatoappsupport@gmail.com">legatoappsupport@gmail.com</a>
+      </address>
+    </section>
+
+    <section class="clause" id="governing-law">
+      <div class="clause-head"><span class="clause-num">10</span><h2>Governing Law</h2></div>
+      <p>This Privacy Policy is governed by the laws of <span class="edit-flag">[JURISDICTION]</span>. If you are located in mainland China, additional rights may apply to you under the Personal Information Protection Law (PIPL); please contact us with any PIPL-related requests.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="site">
+  <div class="footer-inner">
+    <span>© 2026 Min Wan · Last updated <span class="edit-flag">[DATE]</span></span>
+    <nav>
+      <a href="index.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
